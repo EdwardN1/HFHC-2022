@@ -1,0 +1,130 @@
+header {.spacer {height: px;max-height: px;height: 120px;
+position: relative;
+@include breakpoint(768) {
+  height: 190px;
+}
+@include breakpoint(1024) {
+  height: 110px;
+}
+@include breakpoint(2000) {
+  height: 130px;
+}}.header-swoosh-x {height: px;max-height: px;display: none;
+height: 117.333vw;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-image: url('/wp-content/uploads/2020/02/header_swoosh_375.png');
+@include breakpoint(375) {
+  background-image: url('/wp-content/uploads/2020/02/header_swoosh_768.png');
+  height: 100vw;
+}
+@include breakpoint(640) {
+  height: 65.555vw;
+}
+@include breakpoint(1024) {
+  background-image: url('/wp-content/uploads/2020/02/header_swoosh_1400.png');
+  height: 42vw;
+}
+@include breakpoint(1400) {
+  background-image: url('/wp-content/uploads/2020/02/header_swoosh_2000.png');
+  height: 42vw;
+}
+
+@include breakpoint(2000) {
+  height:33vw;
+}
+
+.logo-large {
+  max-width: 1200px;
+  width: 85.714vw;
+  margin-left: auto;
+  margin-right: auto;
+  display:none;
+  @include breakpoint(1024) {
+    display: block;
+    margin-top: -1.953vw;
+  }
+  @include breakpoint(1200) {
+    margin-top:0;
+  }
+}
+
+.logo-small {
+  display: block;
+  width: 88.021vw;
+  margin-left: auto;
+  margin-right: auto;
+  top: -19vw;
+  position: relative;
+  @include breakpoint(375) {
+    top: -15vw;
+  }
+  @include breakpoint(420) {
+    top: -12vw;
+  }
+  @include breakpoint(1024) {
+    display: none;
+  }
+}
+
+.heading {
+  width: 88.021vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 27px;
+  padding-top: 11vw;
+  line-height: 36px;
+  span {
+    display: block;
+    &.lato-black {
+      max-width: 285px;
+    }
+  }
+  @include breakpoint(768) {
+    span {
+      display: inline;
+      &.lato-black {
+      	max-width: auto;
+      }
+    }
+    max-width: 1080px;
+  	width: 77.143vw;
+    padding-top: 13vw;
+    font-size: 40px;
+    line-height: 56px;
+  }
+  @include breakpoint(862) {
+    padding-right: 125px;
+  }
+  @include breakpoint(1024) {
+    padding-top: 5vw;
+    padding-right: 250px;
+  }
+  @include breakpoint(1180) {
+    padding-right: 300px;
+  }
+  @include breakpoint(1240) {
+    padding-right: 415px;
+  }
+  @include breakpoint(1400) {
+    padding-top: 10vw;
+    padding-right: 500px;
+  }
+  @include breakpoint(2000) {
+    padding-top: 7.9vw;
+  }
+}
+
+.learn-more {
+  width: 88.021vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6vw;
+  @include breakpoint(768) {
+    max-width: 1080px;
+  	width: 77.143vw;
+  }
+  @include breakpoint(1024) {
+    padding-top: 2vw;
+  }
+}}}

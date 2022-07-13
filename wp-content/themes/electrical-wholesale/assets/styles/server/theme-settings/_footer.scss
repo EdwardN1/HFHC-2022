@@ -1,0 +1,248 @@
+footer {.gratuitous-footer-swoosh {height: px;max-height: px;background-image: url("/wp-content/uploads/2020/02/swoosh_375.png");
+background-size: cover;
+background-repeat: no-repeat;
+width: 100%;
+height:25.333vw;
+@include breakpoint(768) {
+  background-image: url("/wp-content/uploads/2020/02/swoosh_768.png");
+  height:25.26vw;
+}
+@include breakpoint(1400) {
+  background-image: url("/wp-content/uploads/2020/02/swoosh_1400.png");
+  /*height:13.857vw;*/
+  height:0;
+}
+@include breakpoint(2000) {
+  background-image: url("/wp-content/uploads/2020/02/swoosh_2000.png");
+  height:13.85vw;
+}}.get-in-touch-heading {height: px;max-height: px;span {
+  display:inline-block;
+  &.fullwidth {
+    width:100%;
+    
+  }
+  &.underline {
+    border-bottom: 1px solid $font-color;
+  }
+  &.padded {
+    @include breakpoint(768) {
+      padding-left: 110px;
+    }
+  }
+}}.get-in-touch-section {height: px;max-height: px;h2 {
+  color: $blue;
+  font-size: 30px;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
+.blue-background {
+  background-color: rgba(20,195,224,0.05);
+  a {
+    color: $font-color;
+    
+  }
+  .section {
+    .left-content {
+      max-width: none;
+     .grid-x > div:first-of-type {
+        position: relative;
+        @include breakpoint(large) {
+          padding-right: 2em;
+          &:after {
+            content: " ";
+            position: absolute;
+            top: 0.5em;
+            bottom: 0.5em;;
+            right: 1em;
+            width: 1px;
+            background-color: rgba(20,195,224,0.4);
+          }
+        }
+      }
+    }
+  }
+  .big-heading {
+    font-weight: $lato-black;
+    font-size: 30px;
+    color: $blue;
+    opacity: 0.3;
+    padding-top: 1em;
+  }
+  .title {
+    font-weight: $lato-black;
+    padding-top: 1em;
+  }
+  .top-border {
+    border-top: 1px solid rgba(20,195,224,0.4);
+  }
+}}.green-swoosh {height: px;max-height: px;.blue-background {
+  background-color: rgba(20,195,224,0.05);
+  a {
+    color: $font-color;
+  }
+  .green-swoosh {
+    background-image: url("/wp-content/uploads/2020/02/footer_swoosh_375.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    /*height:230.4vw;*/
+		height: 350px;
+    @include breakpoint(768) {
+      background-image: url("/wp-content/uploads/2020/02/footer_swoosh_768.png");
+      /*height:130.599vw;*/
+    }
+    @include breakpoint(1400) {
+      background-image: url("/wp-content/uploads/2020/02/footer_swoosh_1400.png");
+      /*height:13.857vw;*/
+      /*height:68.5vw;*/
+    }
+    @include breakpoint(2000) {
+      background-image: url("/wp-content/uploads/2020/02/footer_swoosh_2000.png");
+      /*height:49.15vw;*/
+    }
+    .top-heading {
+      padding-top: 9em;
+      span {
+        text-transform: uppercase;
+        display:inline-block;
+        &.fullwidth {
+          width:100%;
+
+        }
+        &.underline {
+          border-bottom: 1px solid $font-color;
+        }
+        &.padded {
+          @include breakpoint(768) {
+            padding-left: 110px;
+          }
+        }
+      }
+    }
+    .left-content {
+      max-width: none;
+      > .grid-x {
+        > div:first-of-type {
+          padding-right: 0;
+          position: relative;
+          &:after {
+            position: absolute;
+            content: "";
+            background-color: rgba(255,255,255,0.5);
+            top: 0.2em;
+            bottom: 0.2em;
+            right: 1.5em;
+            width: 0;
+          }
+          @include breakpoint(medium) {
+            padding-right: 3em;
+            &:after {
+              content: " ";
+              width: 1px;
+            }
+          }
+        }
+        > div:last-of-type {
+          > div:last-of-type {
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+          }
+       	}
+        > div {
+          > div:last-of-type {
+            @include breakpoint(medium) {
+              border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+          }
+        }
+       	
+      }
+      .top-line {
+        border-top: 1px solid rgba(255,255,255,0.5);
+        padding-top: 1em;
+        padding-bottom:1em;
+        padding-right: 1em;
+      }
+      .sm-text {
+        padding-left: 1em;
+      }
+      .sm-date {
+        > span {
+          display: block;
+          font-size: 14px;
+          font-weight: $lato-black;
+          border: 2px solid $font-color;
+          border-radius: 50%;
+          line-height: 1.1;
+          padding-top: 0.6em;
+          padding-bottom: 0.6em;
+          padding-left: 1em;
+          padding-right: 1em;
+          text-align: center;
+        }
+        .num {
+          font-size: 22px;
+        }
+      }
+    }
+    h2 {
+      font-size: 27px;
+      margin-top: 1em;
+      margin-bottom: 2em;
+      
+    }
+    .read-more {
+      text-transform: uppercase;
+      font-weight: $lato-black;
+      font-size: 15px;
+      padding-top: 3em;
+      .facebook {
+        margin-right: 0.5em;
+        display: inline-block;
+        height: 48px;
+        width: 48px;
+        background-image: url("/wp-content/uploads/2020/02/facebook.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        &:hover {
+          background-image: url("/wp-content/uploads/2020/02/facebook_hover.svg");
+        }
+      }
+      .linkedIn {
+        margin-right: 0.5em;
+        display: inline-block;
+        height: 48px;
+        width: 48px;
+        background-image: url("/wp-content/uploads/2020/02/linkedIn.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        &:hover {
+          background-image: url("/wp-content/uploads/2020/02/linkedIn_hover.svg");
+        }
+      }
+      .twitter {
+        display: inline-block;
+        height: 48px;
+        width: 48px;
+        background-image: url("/wp-content/uploads/2020/02/twitter.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        &:hover {
+          background-image: url("/wp-content/uploads/2020/02/twitter_hover.svg");
+        }
+      }
+    }
+  }
+}}.bottom-row {height: px;max-height: px;background-color: rgba(178,221,41,0.2);
+color: $green;
+font-size: 15px;
+text-transform: uppercase;
+line-height: 50px;
+a {
+ color: $green; 
+  font-size: 15px;
+}
+.divider {
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 2em;
+}}}

@@ -1,0 +1,65 @@
+.page-id-932 {#page-nav {background-color: $light-blue;
+position: fixed;
+width: 100%;
+z-index: 10;
+bottom: 0;
+left: 0;
+
+@include breakpoint(768) {
+  display:block;
+  bottom: auto;
+  top: 0;
+}
+.cell {
+  a {
+  text-transform: uppercase;
+  color: $font-color;
+  font-weight: $lato-black;
+  font-size: 14px;
+  line-height: 50px;
+    &:after {
+      content: url("/wp-content/uploads/2020/02/menu_down_arrow_blue.png");
+      padding-left: 0.5em;
+    }
+  }
+  &.text-right {
+    padding-right: 1em;
+    position: relative;
+    @include breakpoint(768) {
+      padding-right: 8em;
+    }
+    &:after {
+      content: " ";
+      border-right: 1px solid #FFFFFF;
+      height:30px;
+      width: 1px;
+      top: 10px;
+      right: 0;
+      position: absolute;
+    }
+  }
+  &.text-left {
+    padding-left:1em;
+    @include breakpoint(768) {
+      padding-left: 8em;
+    }
+    position: relative;
+    &:after {
+      content: " ";
+      border-left: 1px solid #FFFFFF;
+      height:30px;
+      width: 1px;
+      top: 10px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  
+  &.active, &:hover {
+    background-color: $light-blue;
+    &:after {
+      content: "";
+      border: none;
+    }
+  }
+}}}

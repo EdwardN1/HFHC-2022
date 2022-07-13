@@ -1,0 +1,646 @@
+.page-id-2 {#page-nav {$test: #12345678;
+background-color: $light-blue;
+position: fixed;
+width: 100%;
+z-index: 10;
+bottom: 0;
+left: 0;
+
+@include breakpoint(768) {
+  display:block;
+  bottom: auto;
+  top: 0;
+}
+.cell {
+	a {
+		text-transform: uppercase;
+		color: $font-color;
+		font-weight: $lato-black;
+		font-size: 10px;
+		line-height: 50px;
+		&:after {
+			content: url("/wp-content/uploads/2020/02/menu_down_arrow_blue.png");
+			padding-left: 0.5em;
+		}
+		@include breakpoint(374) {
+			font-size: 14px;
+		}
+	}
+	a.nav-up {
+		&:after {
+			content: url("/wp-content/uploads/2020/02/menu_up_arrow_blue.png");
+		}
+	}
+  &.text-right {
+    padding-right: 1em;
+    position: relative;
+    @include breakpoint(768) {
+      padding-right: 8em;
+    }
+    &:after {
+      content: " ";
+      border-right: 1px solid #FFFFFF;
+      height:30px;
+      width: 1px;
+      top: 10px;
+      right: 0;
+      position: absolute;
+    }
+  }
+  &.text-left {
+    padding-left:0.5em;
+    @include breakpoint(768) {
+      padding-left: 8em;
+    }
+    position: relative;
+    &:after {
+      content: " ";
+      border-left: 1px solid #FFFFFF;
+      height:30px;
+      width: 1px;
+      top: 10px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  
+  &.active, &:hover {
+    background-color: $light-blue;
+    &:after {
+      content: "";
+      border: none;
+    }
+  }
+}}#header-swoosh {height: 117.333vw;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-image: url('/wp-content/uploads/2020/02/header_swoosh_375.png');
+@include breakpoint(375) {
+  background-image: url('/wp-content/uploads/2020/02/header_swoosh_768.png');
+  height: 100vw;
+}
+@include breakpoint(640) {
+  height: 65.555vw;
+}
+@include breakpoint(1024) {
+  background-image: url('/wp-content/uploads/2020/02/header_swoosh_1400.png');
+  height: 42vw;
+}
+@include breakpoint(1400) {
+  background-image: url('/wp-content/uploads/2020/02/header_swoosh_2000.png');
+  height: 42vw;
+}
+
+@include breakpoint(2000) {
+  height:33vw;
+}
+
+.logo-large {
+  max-width: 1200px;
+  width: 85.714vw;
+  margin-left: auto;
+  margin-right: auto;
+  display:none;
+  @include breakpoint(1024) {
+    display: block;
+    margin-top: -1.953vw;
+  }
+  @include breakpoint(1200) {
+    margin-top:0;
+  }
+}
+
+.logo-small {
+  display: block;
+  width: 88.021vw;
+  margin-left: auto;
+  margin-right: auto;
+  top: -19vw;
+  position: relative;
+  @include breakpoint(375) {
+    top: -15vw;
+  }
+  @include breakpoint(420) {
+    top: -12vw;
+  }
+  @include breakpoint(1024) {
+    display: none;
+  }
+}
+
+.heading {
+  width: 88.021vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 27px;
+  padding-top: 11vw;
+  line-height: 36px;
+  span {
+    display: block;
+    &.lato-black {
+      max-width: 285px;
+    }
+  }
+  @include breakpoint(768) {
+    span {
+      display: inline;
+      &.lato-black {
+      	max-width: auto;
+      }
+    }
+    max-width: 1080px;
+  	width: 77.143vw;
+    padding-top: 13vw;
+    font-size: 40px;
+    line-height: 56px;
+  }
+  @include breakpoint(862) {
+    padding-right: 125px;
+  }
+  @include breakpoint(1024) {
+    padding-top: 5vw;
+    padding-right: 250px;
+  }
+  @include breakpoint(1180) {
+    padding-right: 300px;
+  }
+  @include breakpoint(1240) {
+    padding-right: 415px;
+  }
+  @include breakpoint(1400) {
+    padding-top: 10vw;
+    padding-right: 500px;
+  }
+  @include breakpoint(2000) {
+    padding-top: 7.9vw;
+  }
+}
+
+.learn-more {
+  width: 88.021vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6vw;
+  @include breakpoint(768) {
+    max-width: 1080px;
+  	width: 77.143vw;
+  }
+  @include breakpoint(1024) {
+    padding-top: 2vw;
+  }
+}}#about-us-heading {span {
+  display:inline-block;
+  &.fullwidth {
+    width:100%;
+    
+  }
+  &.underline {
+    border-bottom: 1px solid $font-color;
+  }
+  &.padded {
+    @include breakpoint(768) {
+      padding-left: 110px;
+    }
+  }
+}}#about-us {padding-bottom: 1em;
+h2 {
+  font-size: 27px;
+  color: $blue;
+  margin-top:1em;
+}
+p {
+  font-size:18px;
+}
+@include breakpoint(767) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
+}}#unique-approach {font-weight: $lato-black;
+color: $blue;
+font-size: 18px;
+@include breakpoint(768) {
+  font-size: 25px;
+}}#where-we-operate {padding-top: 1em;
+padding-bottom: 2em;}#icons {padding-top: 2em;
+padding-bottom: 1em;
+border-top: 1px solid $font-color;
+border-bottom: 1px solid $font-color;
+text-align: center;
+color: $blue;
+text-transform: uppercase;
+font-size: 14px;
+min-height: 213px;
+@include breakpoint(768) {
+  font-size: 15px;
+  padding-left: 55px;
+}
+.bottom {
+  padding: 1em;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.first, .second, .third {
+  position: relative;
+  &:after {
+    content: "";
+    background-color: transparent;
+  }
+  @include breakpoint(medium) {
+    &:after {
+      content: " ";
+      position: absolute;
+      width: 1px;
+      top:-1em;
+      bottom:0;
+      right:0;
+      background-color: #EFEFEF;
+    }
+  }
+}
+.first, .third {
+  &:after {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    right:0;
+    background-color: #EFEFEF;
+    @include breakpoint(medium) {
+      top:-1em;
+    }
+  }
+}
+.first {
+  &:after {
+    top: -1em;
+  	bottom: 1em;
+    @include breakpoint(medium) {
+      top:-1em;
+      bottom: 0;
+    }
+  }
+}
+.third {
+  &:after {
+    top: 1em;
+  	bottom: 0;
+    @include breakpoint(medium) {
+      top: -1em;
+      bottom: 0;
+    }
+  }
+}
+
+.first, .second {
+  border-bottom: 1px solid #EFEFEF;
+  @include breakpoint(medium) {
+    border-bottom: none;
+  }
+}
+.third, .forth {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  @include breakpoint(medium) {
+    padding-top: 0;
+    padding-bottom:0;
+  }
+}
+.first, .second, .third, .forth {
+	min-height: 140px;
+	.icon {
+		display: none;
+	}
+}}#two-panel-services-desktop {display: none;
+padding-top: 3em;
+@include breakpoint(769) {
+  display: block;
+}
+.blue-box {
+  background-color: $blue;
+  width: 380px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 4em;
+  padding-bottom:4em;
+  color: #FFFFFF;
+  font-weight:$lato-black;
+  font-size:20px;
+}
+
+.blue.bold {
+  color: $blue;
+  font-weight: $lato-black;
+  font-size:25px;
+}}#two-panel-services-mobile {display: block;
+padding-top: 2em;
+@include breakpoint(769) {
+  display: none;
+}
+.blue-box {
+  background-color: $blue;
+  width: 85.286vw;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 2em;
+  padding-bottom:2em;
+  color: #FFFFFF;
+  font-weight:$lato-black;
+  margin-bottom: 1em;
+  font-size:18px;
+  @include breakpoint(768) {
+    font-size: 20px;
+  }
+}
+
+.blue.bold {
+  color: $blue;
+  font-weight: $lato-black;
+  font-size: 18px;
+  @include breakpoint(768) {
+    font-size:25px;
+  }
+}}#join-our-team-heading {span {
+  display:inline-block;
+  &.fullwidth {
+    width:100%;
+    
+  }
+  &.underline {
+    border-bottom: 1px solid $font-color;
+  }
+  &.padded {
+    @include breakpoint(768) {
+      padding-left: 110px;
+    }
+  }
+}}#join-our-team {padding-bottom: 3em;
+h2 {
+  font-size: 27px;
+  color: $blue;
+  margin-top:1em;
+}
+p {
+  font-size:18px;
+}
+@include breakpoint(767) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
+}}#we-offer-grid {.icon {
+	display: none;
+}
+padding-bottom: 1em;
+border-top: 1px solid $font-color;
+border-bottom: 1px solid $font-color;
+text-align: center;
+color: $font-color;
+text-transform: uppercase;
+font-size: 14px;
+@include breakpoint(768) {
+  font-size: 15px;
+}
+.blue-bar {
+  background-color: $light-blue;
+  line-height:47px;
+  height: 47px;
+  margin-bottom: 2em;
+}
+.bottom {
+  padding: 1em;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.first, .second, .third, .forth {
+  border-bottom: 1px solid #EFEFEF;
+  @include breakpoint(medium) {
+    border-bottom: none;
+  }
+}
+.first, .second, .third {
+  @include breakpoint(medium) {
+    border-bottom: 1px solid #EFEFEF;
+  }
+}
+
+
+.first, .second, .third, .forth, .fifth, .sixth {
+  position: relative;
+  &:after {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    top: 1em;
+    bottom:1em;
+    right:0;
+    background-color: transparent;
+    @include breakpoint(large) {
+      bottom:0;
+    }
+  }
+  @include breakpoint(large) {
+    border-bottom: none;
+  }
+}
+
+.first, .second, .third, .forth, .fifth, .sixth {
+  padding-bottom: 1em;
+  @include breakpoint(large) {
+    padding-bottom: 0;
+  }
+}
+
+.third, .forth, .fifth, .sixth {
+  padding-top:2em;
+  @include breakpoint(medium) {
+    padding-top: 0;
+  }
+}
+.forth, .fifth, .sixth {
+  padding-top:2em;
+  @include breakpoint(large) {
+    padding-top: 0;
+  }
+}
+
+.first, .third, .fifth {
+  &:after {
+    background-color: #EFEFEF;
+    @include breakpoint(medium) {
+      background-color: transparent;
+    }
+  }
+}
+
+.first, .second {
+  &:after {
+    top: -1em;
+  }
+}
+
+.first, .second, .forth, .fifth {
+  &:after {
+    @include breakpoint(medium) {
+      background-color: #EFEFEF;
+    }
+  }
+}
+
+.third {
+  &:after {
+    @include breakpoint(medium) {
+      top: -1em;
+    }
+    @include breakpoint(large) {
+      background-color: #EFEFEF;
+    }
+  }
+}
+
+.forth, .fifth {
+  &:after {
+    @include breakpoint(large) {
+      top: -1em;
+    }
+  }
+}}#view-roles-and-apply {padding-top: 3em;
+.blue.bold {
+  color: $blue;
+  font-weight: $lato-black;
+  font-size:25px;
+}}#roles-available-heading {span {
+  display:inline-block;
+  &.fullwidth {
+    width:100%;
+    
+  }
+  &.underline {
+    border-bottom: 1px solid $font-color;
+  }
+  &.padded {
+    @include breakpoint(768) {
+      padding-left: 110px;
+    }
+  }
+}}#roles-accordion {max-width: none;
+width: 100%;
+padding-bottom: 3em;
+h2 {
+  font-size: 27px;
+  color: $blue;
+  margin-top:1em;
+  margin-bottom: 1em;
+}
+p {
+  font-size:18px;
+	color: $primary-color;
+}
+.left-content {
+  max-width: none;
+   @include breakpoint(768) {
+     margin-right: 110px;
+     margin-left: 110px;
+   }
+}
+@include breakpoint(768) {
+  max-width:1190px;
+  width: 89.6vw;
+  margin-left: auto;
+  margin-right:auto;
+}
+.accordion {
+	border-top: 1px solid $primary-color;
+	border-bottom: 2px solid $primary-color;
+  .accordion-item {
+    .accordion-title {
+      border: none;
+      border-top: 1px solid $primary-color;
+      /*border-bottom: 1px solid $primary-color;*/
+      color: $font-color;
+      font-size: 30px;
+      text-transform: uppercase;
+      padding-left: 0;
+      &:before {
+        content: " ";
+        background-image: url("/wp-content/uploads/2020/02/menu_down_arrow_blue.png");
+        height: 1.5em;
+        width:1.5em;
+        margin-top: -0.75em;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    &.is-active {
+      .accordion-title {
+        background-color: $blue;
+        color: #FFFFFF;
+        border-bottom: none;
+        &:before{
+          background-image: url("/wp-content/uploads/2020/02/button_arrow_down_white.png");
+        }
+      }
+    }
+  }
+  .accordion-content {
+    background-color: rgba(20,195,224,0.05);
+    border: none;
+    border-bottom: 1px solid rgba(20,195,224,0.4);
+    padding: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+		color: $primary-color;
+    .title {
+      font-weight: $lato-black;
+      text-transform: uppercase;
+			color: $primary-color;
+    }
+    .underlined {
+      border-bottom: 1px solid rgba(20,195,224,0.4);
+      margin-bottom: 2em;
+      padding-bottom: 1em; 
+      &.large {
+        border: none;
+				color: $primary-color;
+        @include breakpoint(large) {
+          border-bottom: 1px solid rgba(20,195,224,0.4);
+        }
+      }
+      &.small {
+        @include breakpoint(large) {
+          border-bottom: none;
+        }
+      }
+    }
+    .grid-x > div:first-of-type {
+      position: relative;
+      @include breakpoint(large) {
+        padding-right: 2em;
+        &:after {
+          content: " ";
+          position: absolute;
+          top: 0;
+          bottom:0;
+          right: 1em;
+          width: 1px;
+          background-color: rgba(20,195,224,0.4);
+        }
+      }
+    }
+  }
+}
+@include breakpoint(767) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+}}
