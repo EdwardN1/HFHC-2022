@@ -65,103 +65,405 @@ get_header(); ?>
                             <div class="grid-x">
                                 <div class="cell auto"><span class="underline fullwidth">&nbsp;</span></div>
                                 <div class="cell shrink">
-                                    <div class="section"><span class="underline padded">ABOUT US</span></div>
+                                    <div class="section"><span
+                                                class="underline padded"><?php the_field('about_us_section_heading', 'option'); ?></span>
+                                    </div>
                                 </div>
                                 <div class="cell auto">&nbsp;</div>
                             </div>
                         </div>
+                        <?php
+                        $about_us_1 = '';
+                        $about_us_2 = '';
+                        $about_us_3 = '';
+                        $about_us_4 = '';
+                        $about_us_5 = '';
+                        $about_us_6 = '';
+                        $about_us_7 = '';
+                        $about_us_8 = '';
+                        $about_us_9 = '';
+                        $about_us_10 = '';
+                        ?>
+                        <?php if (have_rows('about_us_paragraphs', 'option')) : ?>
+                            <?php while (have_rows('about_us_paragraphs', 'option')) : the_row(); ?>
+                                <?php if ($about_us_1 == ''): ?>
+                                    <?php if (get_sub_field('highlighted') == 1) : ?>
+                                        <?php ob_start(); ?>
+                                        <div class="left-content">
+                                            <div class="blue bold">
+                                                <div class="blue-line"></div>
+                                                <?php the_sub_field('content'); ?>
+                                                <div class="blue-line"></div>
+                                            </div>
+                                        </div>
+                                        <?php
+                                        $about_us_1 = ob_get_contents();
+                                        ob_end_clean();
+                                        ?>
+                                    <?php else : ?>
+                                        <?php ob_start(); ?>
+                                        <div class="left-content">
+                                            <p>
+                                                <?php the_sub_field('content'); ?>
+                                            </p>
+                                        </div>
+                                        <?php
+                                        $about_us_1 = ob_get_contents();
+                                        ob_end_clean();
+                                        ?>
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <?php if ($about_us_2 == ''): ?>
+                                        <?php if (get_sub_field('highlighted') == 1) : ?>
+                                            <?php ob_start(); ?>
+                                            <div class="left-content">
+                                                <div class="blue bold">
+                                                    <div class="blue-line"></div>
+                                                    <?php the_sub_field('content'); ?>
+                                                    <div class="blue-line"></div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                            $about_us_2 = ob_get_contents();
+                                            ob_end_clean();
+                                            ?>
+                                        <?php else : ?>
+                                            <?php ob_start(); ?>
+                                            <div class="left-content">
+                                                <p>
+                                                    <?php the_sub_field('content'); ?>
+                                                </p>
+                                            </div>
+                                            <?php
+                                            $about_us_2 = ob_get_contents();
+                                            ob_end_clean();
+                                            ?>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <?php if ($about_us_3 == ''): ?>
+                                            <?php if (get_sub_field('highlighted') == 1) : ?>
+                                                <?php ob_start(); ?>
+                                                <div class="left-content">
+                                                    <div class="blue bold">
+                                                        <div class="blue-line"></div>
+                                                        <?php the_sub_field('content'); ?>
+                                                        <div class="blue-line"></div>
+                                                    </div>
+                                                </div>
+                                                <?php
+                                                $about_us_3 = ob_get_contents();
+                                                ob_end_clean();
+                                                ?>
+                                            <?php else : ?>
+                                                <?php ob_start(); ?>
+                                                <div class="left-content">
+                                                    <p>
+                                                        <?php the_sub_field('content'); ?>
+                                                    </p>
+                                                </div>
+                                                <?php
+                                                $about_us_3 = ob_get_contents();
+                                                ob_end_clean();
+                                                ?>
+                                            <?php endif; ?>
+                                        <?php else: ?>
+                                            <?php if ($about_us_4 == ''): ?>
+                                                <?php if (get_sub_field('highlighted') == 1) : ?>
+                                                    <?php ob_start(); ?>
+                                                    <div class="left-content">
+                                                        <div class="blue bold">
+                                                            <div class="blue-line"></div>
+                                                            <?php the_sub_field('content'); ?>
+                                                            <div class="blue-line"></div>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                    $about_us_4 = ob_get_contents();
+                                                    ob_end_clean();
+                                                    ?>
+                                                <?php else : ?>
+                                                    <?php ob_start(); ?>
+                                                    <div class="left-content">
+                                                        <p>
+                                                            <?php the_sub_field('content'); ?>
+                                                        </p>
+                                                    </div>
+                                                    <?php
+                                                    $about_us_4 = ob_get_contents();
+                                                    ob_end_clean();
+                                                    ?>
+                                                <?php endif; ?>
+                                            <?php else: ?>
+                                                <?php if ($about_us_5 == ''): ?>
+                                                    <?php if (get_sub_field('highlighted') == 1) : ?>
+                                                        <?php ob_start(); ?>
+                                                        <div class="left-content">
+                                                            <div class="blue bold">
+                                                                <div class="blue-line"></div>
+                                                                <?php the_sub_field('content'); ?>
+                                                                <div class="blue-line"></div>
+                                                            </div>
+                                                        </div>
+                                                        <?php
+                                                        $about_us_5 = ob_get_contents();
+                                                        ob_end_clean();
+                                                        ?>
+                                                    <?php else : ?>
+                                                        <?php ob_start(); ?>
+                                                        <div class="left-content">
+                                                            <p>
+                                                                <?php the_sub_field('content'); ?>
+                                                            </p>
+                                                        </div>
+                                                        <?php
+                                                        $about_us_5 = ob_get_contents();
+                                                        ob_end_clean();
+                                                        ?>
+                                                    <?php endif; ?>
+                                                <?php else: ?>
+                                                    <?php if ($about_us_6 == ''): ?>
+                                                        <?php if (get_sub_field('highlighted') == 1) : ?>
+                                                            <?php ob_start(); ?>
+                                                            <div class="left-content">
+                                                                <div class="blue bold">
+                                                                    <div class="blue-line"></div>
+                                                                    <?php the_sub_field('content'); ?>
+                                                                    <div class="blue-line"></div>
+                                                                </div>
+                                                            </div>
+                                                            <?php
+                                                            $about_us_6 = ob_get_contents();
+                                                            ob_end_clean();
+                                                            ?>
+                                                        <?php else : ?>
+                                                            <?php ob_start(); ?>
+                                                            <div class="left-content">
+                                                                <p>
+                                                                    <?php the_sub_field('content'); ?>
+                                                                </p>
+                                                            </div>
+                                                            <?php
+                                                            $about_us_6 = ob_get_contents();
+                                                            ob_end_clean();
+                                                            ?>
+                                                        <?php endif; ?>
+                                                    <?php else: ?>
+                                                        <?php if ($about_us_7 == ''): ?>
+                                                            <?php if (get_sub_field('highlighted') == 1) : ?>
+                                                                <?php ob_start(); ?>
+                                                                <div class="left-content">
+                                                                    <div class="blue bold">
+                                                                        <div class="blue-line"></div>
+                                                                        <?php the_sub_field('content'); ?>
+                                                                        <div class="blue-line"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <?php
+                                                                $about_us_7 = ob_get_contents();
+                                                                ob_end_clean();
+                                                                ?>
+                                                            <?php else : ?>
+                                                                <?php ob_start(); ?>
+                                                                <div class="left-content">
+                                                                    <p>
+                                                                        <?php the_sub_field('content'); ?>
+                                                                    </p>
+                                                                </div>
+                                                                <?php
+                                                                $about_us_7 = ob_get_contents();
+                                                                ob_end_clean();
+                                                                ?>
+                                                            <?php endif; ?>
+                                                        <?php else: ?>
+                                                            <?php if ($about_us_8 == ''): ?>
+                                                                <?php if (get_sub_field('highlighted') == 1) : ?>
+                                                                    <?php ob_start(); ?>
+                                                                    <div class="left-content">
+                                                                        <div class="blue bold">
+                                                                            <div class="blue-line"></div>
+                                                                            <?php the_sub_field('content'); ?>
+                                                                            <div class="blue-line"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <?php
+                                                                    $about_us_8 = ob_get_contents();
+                                                                    ob_end_clean();
+                                                                    ?>
+                                                                <?php else : ?>
+                                                                    <?php ob_start(); ?>
+                                                                    <div class="left-content">
+                                                                        <p>
+                                                                            <?php the_sub_field('content'); ?>
+                                                                        </p>
+                                                                    </div>
+                                                                    <?php
+                                                                    $about_us_8 = ob_get_contents();
+                                                                    ob_end_clean();
+                                                                    ?>
+                                                                <?php endif; ?>
+                                                            <?php else: ?>
+                                                                <?php if ($about_us_9 == ''): ?>
+                                                                    <?php if (get_sub_field('highlighted') == 1) : ?>
+                                                                        <?php ob_start(); ?>
+                                                                        <div class="left-content">
+                                                                            <div class="blue bold">
+                                                                                <div class="blue-line"></div>
+                                                                                <?php the_sub_field('content'); ?>
+                                                                                <div class="blue-line"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <?php
+                                                                        $about_us_9 = ob_get_contents();
+                                                                        ob_end_clean();
+                                                                        ?>
+                                                                    <?php else : ?>
+                                                                        <?php ob_start(); ?>
+                                                                        <div class="left-content">
+                                                                            <p>
+                                                                                <?php the_sub_field('content'); ?>
+                                                                            </p>
+                                                                        </div>
+                                                                        <?php
+                                                                        $about_us_9 = ob_get_contents();
+                                                                        ob_end_clean();
+                                                                        ?>
+                                                                    <?php endif; ?>
+                                                                <?php else: ?>
+                                                                    <?php if ($about_us_10 == ''): ?>
+                                                                        <?php if (get_sub_field('highlighted') == 1) : ?>
+                                                                            <?php ob_start(); ?>
+                                                                            <div class="left-content">
+                                                                                <div class="blue bold">
+                                                                                    <div class="blue-line"></div>
+                                                                                    <?php the_sub_field('content'); ?>
+                                                                                    <div class="blue-line"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <?php
+                                                                            $about_us_10 = ob_get_contents();
+                                                                            ob_end_clean();
+                                                                            ?>
+                                                                        <?php else : ?>
+                                                                            <?php ob_start(); ?>
+                                                                            <div class="left-content">
+                                                                                <p>
+                                                                                    <?php the_sub_field('content'); ?>
+                                                                                </p>
+                                                                            </div>
+                                                                            <?php
+                                                                            $about_us_10 = ob_get_contents();
+                                                                            ob_end_clean();
+                                                                            ?>
+                                                                        <?php endif; ?>
+                                                                    <?php endif; ?>
+                                                                <?php endif; ?>
+                                                            <?php endif; ?>
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+
+
+                            <?php endwhile; ?>
+                        <?php else : ?>
+                            <?php // No rows found ?>
+                        <?php endif; ?>
                         <div id="about-us" class="section">
                             <div class="left-content">
-                                <h2>Providing the highest level of care</h2>
-                                <p>HFHC Healthcare provides carers and support workers to people in their own homes as
-                                    well as supplying specialist staff to other establishments offering care.</p>
+                                <h2><?php the_field('about_us_title', 'option'); ?></h2>
+                                <?php if ($about_us_1 != ''): ?>
+                                    <p><?php
+                                        $about_us_paragraphs = get_field('about_us_paragraphs', 'option');
+                                        echo $about_us_paragraphs[0]['content'];
+                                        ?></p>
+                                <?php endif; ?>
                             </div>
                         </div>
-                        <div id="unique-approach" class="section">
-                            <div class="left-content">
-                                <div class="blue-line">&nbsp;</div>
-                                Our approach is unique, based on family values, dedicated teams and a dynamic digital
-                                platform.
-                                <div class="blue-line">&nbsp;</div>
+                        <?php if ($about_us_2 != ''): ?>
+                            <div id="unique-approach" class="section">
+                                <?php echo $about_us_2; ?>
                             </div>
-                        </div>
-                        <div id="where-we-operate" class="section">
-                            <div class="left-content">
-                                We operate in Lincolnshire, North East Lincolnshire and Nottinghamshire and care
-                                services are regulated and inspected by the Care Quality Commission (CQC).
+                        <?php endif; ?>
+                        <?php if ($about_us_3 != ''): ?>
+                            <div id="where-we-operate" class="section">
+                                <?php echo $about_us_3; ?>
                             </div>
-                        </div>
-                        <div id="icons" class="section">
-                            <div class="grid-x">
-                                <div class="cell large-3 medium-3 small-6 first">
-                                    <div class="icon">
-                                        <div class="top">
-                                            <img src="https://hfhc3.making.me.uk/wp-content/uploads/2020/02/clock.svg">
+                        <?php endif; ?>
+                        <?php if (have_rows('about_us_icon_text', 'option')) : ?>
+                            <?php while (have_rows('about_us_icon_text', 'option')) : the_row(); ?>
+                                <div id="icons" class="section">
+                                    <div class="grid-x">
+                                        <div class="cell large-3 medium-3 small-6 first">
+                                            <div class="icon">
+                                                <div class="top">
+                                                    <img src="https://hfhc3.making.me.uk/wp-content/uploads/2020/02/clock.svg">
+                                                </div>
+                                                <div class="bottom">
+                                                    <?php the_sub_field('icon_1'); ?>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="bottom">
-                                            Up to 24 hour care available
+                                        <div class="cell large-3 medium-3 small-6 second">
+                                            <div class="icon">
+                                                <div class="top">
+                                                    <img src="https://hfhc3.making.me.uk/wp-content/uploads/2020/02/person.svg">
+                                                </div>
+                                                <div class="bottom">
+                                                    <?php the_sub_field('icon_2'); ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cell large-3 medium-3 small-6 third">
+                                            <div class="icon">
+                                                <div class="top">
+                                                    <img src="https://hfhc3.making.me.uk/wp-content/uploads/2020/02/home.svg">
+                                                </div>
+                                                <div class="bottom">
+                                                    <?php the_sub_field('icon_3'); ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cell large-3 medium-3 small-6 forth">
+                                            <div class="icon">
+                                                <div class="top">
+                                                    <img src="https://hfhc3.making.me.uk/wp-content/uploads/2020/02/office.svg">
+                                                </div>
+                                                <div class="bottom">
+                                                    <?php the_sub_field('icon_4'); ?>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cell large-3 medium-3 small-6 second">
-                                    <div class="icon">
-                                        <div class="top">
-                                            <img src="https://hfhc3.making.me.uk/wp-content/uploads/2020/02/person.svg">
-                                        </div>
-                                        <div class="bottom">
-                                            Bespoke care packages tailored around individuals
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cell large-3 medium-3 small-6 third">
-                                    <div class="icon">
-                                        <div class="top">
-                                            <img src="https://hfhc3.making.me.uk/wp-content/uploads/2020/02/home.svg">
-                                        </div>
-                                        <div class="bottom">
-                                            Providing care within your own home
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cell large-3 medium-3 small-6 forth">
-                                    <div class="icon">
-                                        <div class="top">
-                                            <img src="https://hfhc3.making.me.uk/wp-content/uploads/2020/02/office.svg">
-                                        </div>
-                                        <div class="bottom">
-                                            Or supplying staff to care establishments
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                         <div id="two-panel-services-desktop" class="section">
                             <div class="grid-x">
                                 <div class="cell auto">
-                                    <div class="left-content">
-                                        HFHC Healthcare provides carers and support workers to people in their own homes
-                                        as well as supplying specialist staff to other establishments offering care.
-                                        <div class="blue bold">
-                                            <div class="blue-line"></div>
-                                            All our staff are recruited to match each client’s specific individual
-                                            needs, location and stage of life.
-                                            <div class="blue-line"></div>
-                                        </div>
-                                    </div>
-                                    <div class="left-content">
-                                        <p>
-                                            We provide highly responsive, safe and effective care - delivered by
-                                            trained, caring and compassionate staff; maintaining dignity and respect at
-                                            all times.
-                                        </p>
-                                    </div>
-                                    <div class="left-content">
-                                        <p>
-                                            Support includes personal care and physical support, mental support and
-                                            companionship for people needing a little extra help – from a few hours a
-                                            week to 24-hour care.
-                                        </p>
-                                    </div>
+                                    <?php if ($about_us_4 != ''): ?>
+                                        <?php echo $about_us_4; ?>
+                                    <?php endif; ?>
+                                    <?php if ($about_us_5 != ''): ?>
+                                        <?php echo $about_us_5; ?>
+                                    <?php endif; ?>
+                                    <?php if ($about_us_6 != ''): ?>
+                                        <?php echo $about_us_6; ?>
+                                    <?php endif; ?>
+                                    <?php if ($about_us_7 != ''): ?>
+                                        <?php echo $about_us_7; ?>
+                                    <?php endif; ?>
+                                    <?php if ($about_us_8 != ''): ?>
+                                        <?php echo $about_us_8; ?>
+                                    <?php endif; ?>
+                                    <?php if ($about_us_9 != ''): ?>
+                                        <?php echo $about_us_9; ?>
+                                    <?php endif; ?>
+                                    <?php if ($about_us_10 != ''): ?>
+                                        <?php echo $about_us_10; ?>
+                                    <?php endif; ?>
                                     <div class="left-content">
                                         <p style="font-weight:900;">
                                             If you have care needs you’d like to discuss, or any questions…
@@ -176,11 +478,14 @@ get_header(); ?>
                                 </div>
                                 <div class="cell shrink">&nbsp;</div>
                                 <div class="cell shrink">
-                                    <div class="blue-box">
-                                        Our specialist services include: <br>Complex Care; Mental Health; Learning
-                                        Disability Support; Palliative Care; Elderly Care; Dementia Care; End of Life
-                                        Care.
-                                    </div>
+                                    <?php if (have_rows('call_out', 'option')) : ?>
+                                        <?php while (have_rows('call_out', 'option')) : the_row(); ?>
+                                            <div class="blue-box">
+                                                <?php the_sub_field('heading'); ?>
+                                                <br><?php the_sub_field('content'); ?>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -237,7 +542,11 @@ get_header(); ?>
                                             <div class="quote-slide">
                                                 <div class="quote-slide-contents">
                                                     <h2>
-                                                        We understand what it is to care for a loved one - the emotions that go with this and how important it is to have high quality care that focuses on their specific needs.
+                                                        We understand what it is to care for a loved one - the emotions
+                                                        that go with
+                                                        this and how important it is to have high quality care that
+                                                        focuses on their
+                                                        specific needs.
                                                     </h2>
                                                     <p>
                                                         Donna Nesbitt, Registered Manager
@@ -248,7 +557,8 @@ get_header(); ?>
                                             <div class="quote-slide">
                                                 <div class="quote-slide-contents">
                                                     <h2>
-                                                        The support staff are always enthusiastic, well presented and reliable.
+                                                        The support staff are always enthusiastic, well presented and
+                                                        reliable.
                                                     </h2>
                                                     <p>
                                                         HFHC Healthcare Client
@@ -259,7 +569,9 @@ get_header(); ?>
                                             <div class="quote-slide">
                                                 <div class="quote-slide-contents">
                                                     <h2>
-                                                        We are committed to delivering the highest quality training for our staff and continually develop and invest in our provision.
+                                                        We are committed to delivering the highest quality training for
+                                                        our staff and
+                                                        continually develop and invest in our provision.
                                                     </h2>
                                                     <p>
                                                         Donna Nesbitt, Registered Manager
@@ -386,21 +698,29 @@ get_header(); ?>
 
                                             <div class="quote-slide">
                                                 <div class="quote-slide-contents">
-                                                    <h2>I love the variety of work that HFHC Healthcare offers. The flexibility of being able to pick and choose my own shifts is also really beneficial.</h2>
+                                                    <h2>I love the variety of work that HFHC Healthcare offers. The
+                                                        flexibility of being
+                                                        able to pick and choose my own shifts is also really
+                                                        beneficial.</h2>
                                                     <!--<p><token type="text" name="Slide1 Sub Heading" /></p>-->
                                                 </div>
                                             </div>
 
                                             <div class="quote-slide">
                                                 <div class="quote-slide-contents">
-                                                    <h2>The training, support and placement allocations are all excellent.</h2>
+                                                    <h2>The training, support and placement allocations are all
+                                                        excellent.</h2>
                                                     <!--<p><token type="text" name="Slide2 Sub Heading" /></p>-->
                                                 </div>
                                             </div>
 
                                             <div class="quote-slide">
                                                 <div class="quote-slide-contents">
-                                                    <h2>The training provided by HFHC Healthcare is second to none. There is always someone to call if you have a problem, and they have been very supportive of me when needed - it's a great company to work for.</h2>
+                                                    <h2>The training provided by HFHC Healthcare is second to none.
+                                                        There is always
+                                                        someone to call if you have a problem, and they have been very
+                                                        supportive of me
+                                                        when needed - it's a great company to work for.</h2>
                                                     <!--<p><token type="text" name="Slide3 Sub Heading" /></p>-->
                                                 </div>
                                             </div>

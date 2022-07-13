@@ -39,24 +39,25 @@
                             <div class="top-border">
                                 <div class="big-heading">PHONE</div>
                                 <div class="title">Want to work for us?</div>
-                                <p><a href="tel:08005200399">0800 520 0399</a></p>
+                                <p><a href="<?php the_field( 'jobs_number_link', 'option' ); ?>"><?php the_field( 'jobs_number', 'option' ); ?></a></p>
                                 <div class="title">Home care enquiry?</div>
-                                <p><a href="">01522 716525</a></p>
+                                <p><a href="<?php the_field( 'home_care_number_link', 'option' ); ?>"><?php the_field( 'home_care_number', 'option' ); ?></a></p>
                                 <div class="title">Care organisation looking for staff?</div>
-                                <p><a href="tel:01522716525">01522 716525</a></p>
+                                <p><a href="<?php the_field( 'care_organisation_number_link', 'option' ); ?>"><?php the_field( 'care_organisation_number', 'option' ); ?></a></p>
                             </div>
                         </div>
                         <div class="cell large-6 medium-12 small-12">
                             <div class="top-border">
                                 <div class="big-heading">EMAIL</div>
-                                <p><a href="mailto:info@hfhchealthcare.com">info@hfhchealthcare.com</a></p>
+                                <p><a href="<?php the_field( 'email_address', 'option' ); ?>"><?php the_field( 'email_address', 'option' ); ?></a></p>
                             </div>
                             <div class="top-border">
                                 <div class="big-heading">ADDRESS</div>
-                                HFHC Healthcare<br>
+                                <!--HFHC Healthcare<br>
                                 The Social Care Exchange<br>
                                 1 Low Moor Road<br>
-                                Lincoln, LN6 3JY
+                                Lincoln, LN6 3JY-->
+                                <?php the_field( 'address', 'option' ); ?>
                             </div>
                         </div>
                     </div>
@@ -81,9 +82,9 @@
 
                         <div class="read-more">
                             <!--<p>READ MORE</p>-->
-                            <a href="https://www.facebook.com/hfhchealthcare/" class="facebook" target="_BLANK"></a>
-                            <a href="https://twitter.com/hfhchealthcare" class="linkedIn" target="_BLANK"></a>
-                            <a href="https://www.linkedin.com/company/hfhchealthcare/" class="twitter" target="_BLANK"></a>
+                            <a href="<?php the_field( 'facebook_link', 'option' ); ?>" class="facebook" target="_BLANK"></a>
+                            <a href="<?php the_field( 'linkedin_link', 'option' ); ?>" class="linkedIn" target="_BLANK"></a>
+                            <a href="<?php the_field( 'twitter_link', 'option' ); ?>" class="twitter" target="_BLANK"></a>
                         </div>
 
 
