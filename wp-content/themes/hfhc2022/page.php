@@ -491,7 +491,16 @@ get_header(); ?>
                         </div>
                         <div id="two-panel-services-mobile">
                             <div class="section">
-                                <div class="left-content">
+                                <?php if ($about_us_1 != ''): ?>
+                                    <?php echo $about_us_1; ?>
+                                <?php endif; ?>
+                                <?php if ($about_us_2 != ''): ?>
+                                    <?php echo $about_us_2; ?>
+                                <?php endif; ?>
+                                <?php if ($about_us_3 = ''): ?>
+                                    <?php echo $about_us_3; ?>
+                                <?php endif; ?>
+                                <!--<div class="left-content">
                                     HFHC Healthcare provides carers and support workers to people in their own homes as
                                     well as supplying specialist staff to other establishments offering care.
                                     <div class="blue bold">
@@ -506,20 +515,49 @@ get_header(); ?>
                                         We provide highly responsive, safe and effective care - delivered by trained,
                                         caring and compassionate staff; maintaining dignity and respect at all times.
                                     </p>
-                                </div>
+                                </div>-->
                             </div>
-                            <div class="blue-box">
+                            <?php if (have_rows('call_out', 'option')) : ?>
+                                <?php while (have_rows('call_out', 'option')) : the_row(); ?>
+                                    <div class="blue-box">
+                                        <?php the_sub_field('heading'); ?>
+                                        <br><?php the_sub_field('content'); ?>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                            <!--<div class="blue-box">
                                 Our specialist services include: <br>Complex Care; Mental Health; Learning Disability
                                 Support; Palliative Care; Elderly Care; Dementia Care; End of Life Care.
-                            </div>
+                            </div>-->
                             <div class="section">
-                                <div class="left-content">
+                                <?php if ($about_us_4 != ''): ?>
+                                    <?php echo $about_us_4; ?>
+                                <?php endif; ?>
+                                <?php if ($about_us_5 != ''): ?>
+                                    <?php echo $about_us_5; ?>
+                                <?php endif; ?>
+                                <?php if ($about_us_6 != ''): ?>
+                                    <?php echo $about_us_6; ?>
+                                <?php endif; ?>
+                                <?php if ($about_us_7 != ''): ?>
+                                    <?php echo $about_us_7; ?>
+                                <?php endif; ?>
+                                <?php if ($about_us_8 != ''): ?>
+                                    <?php echo $about_us_8; ?>
+                                <?php endif; ?>
+                                <?php if ($about_us_9 != ''): ?>
+                                    <?php echo $about_us_9; ?>
+                                <?php endif; ?>
+                                <?php if ($about_us_10 != ''): ?>
+                                    <?php echo $about_us_10; ?>
+                                <?php endif; ?>
+                                <!--<div class="left-content">
                                     <p>
                                         Support includes personal care and physical support, mental support and
                                         companionship for people needing a little extra help – from a few hours a week
                                         to 24-hour care.
                                     </p>
-                                </div>
+                                </div>-->
                                 <div class="left-content">
                                     <p style="font-weight:900;">
                                         If you have care needs you’d like to discuss, or any questions…
