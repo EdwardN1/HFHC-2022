@@ -571,57 +571,33 @@ get_header(); ?>
                                 </div>
                             </div>
                         </div>
-                        <div id="slider-quotes-care-establishments">
-                            <div class="slider">
-                                <div class="section">
-                                    <div class="left-content">
-                                        <div class="quote-slider" data-slick-slider data-slick='{"dots": true}'>
+                        <?php if (have_rows('care_establishment_quotes', 'option')) : ?>
+                            <div id="slider-quotes-care-establishments">
+                                <div class="slider">
+                                    <div class="section">
+                                        <div class="left-content">
+                                            <div class="quote-slider" data-slick-slider data-slick='{"dots": true}'>
+                                                <?php while (have_rows('care_establishment_quotes', 'option')) : the_row(); ?>
+                                                    <div class="quote-slide">
+                                                        <div class="quote-slide-contents">
+                                                            <h2>
+                                                                <?php the_sub_field( 'quote' ); ?>
+                                                            </h2>
+                                                            <p>
+                                                                <?php the_sub_field( 'staff_member' ); ?>
+                                                            </p>
+                                                        </div>
+                                                    </div>
 
-                                            <div class="quote-slide">
-                                                <div class="quote-slide-contents">
-                                                    <h2>
-                                                        We understand what it is to care for a loved one - the emotions
-                                                        that go with
-                                                        this and how important it is to have high quality care that
-                                                        focuses on their
-                                                        specific needs.
-                                                    </h2>
-                                                    <p>
-                                                        Donna Nesbitt, Registered Manager
-                                                    </p>
-                                                </div>
+                                                <?php endwhile; ?>
                                             </div>
-
-                                            <div class="quote-slide">
-                                                <div class="quote-slide-contents">
-                                                    <h2>
-                                                        The support staff are always enthusiastic, well presented and
-                                                        reliable.
-                                                    </h2>
-                                                    <p>
-                                                        HFHC Healthcare Client
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="quote-slide">
-                                                <div class="quote-slide-contents">
-                                                    <h2>
-                                                        We are committed to delivering the highest quality training for
-                                                        our staff and
-                                                        continually develop and invest in our provision.
-                                                    </h2>
-                                                    <p>
-                                                        Donna Nesbitt, Registered Manager
-                                                    </p>
-                                                </div>
-                                            </div>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php else : ?>
+                            <?php // No rows found ?>
+                        <?php endif; ?>
                         <div id="join-our-team-heading" data-magellan-target="join-our-team-heading">
                             <div class="grid-x">
                                 <div class="cell auto"><span class="underline fullwidth">&nbsp;</span></div>
