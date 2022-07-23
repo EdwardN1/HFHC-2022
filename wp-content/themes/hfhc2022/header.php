@@ -52,5 +52,8 @@
         </div>
     </div>
 </div>
+<?php else: ?>
+
+    <?php get_template_part('parts/nav', 'topbar'); ?>
 
 <?php endif;?>
