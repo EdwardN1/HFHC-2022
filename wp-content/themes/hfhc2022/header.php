@@ -37,6 +37,8 @@
 
 <body <?php body_class(); ?>>
 
+<?php if(is_front_page()): ?>
+
 <div id="page-nav">
     <div class="grid-x" data-magellan="" data-offset="50" data-resize="pxnp8k-magellan" data-scroll="pxnp8k-magellan"
          id="pxnp8k-magellan" data-t="bj9egk-t" data-events="resize">
@@ -50,3 +52,5 @@
         </div>
     </div>
 </div>
+
+<?php endif;?>
